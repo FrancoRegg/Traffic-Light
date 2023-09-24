@@ -15,19 +15,39 @@ const TrafficLight = () => {
       setColor("red")
     }
 
-    useEffect(()=>{                                 
-      const colorRotation = setInterval (() => {
+//Utilizo un temporizador para que el color cambie solo cada cinco segundos
+    useEffect(() => {
+      const colorRotation = setInterval(() => {
         ColorChange()
       }, 5000);
 
-      return () =>{
-        clearInterval (colorRotation)
+      return () => {
+        clearInterval(colorRotation)
       };
     }, [color])
-  }
+  };
+
   return (
-		
-	);
+    <div className="container">
+      <div className="traffic-light">
+        <div className={`circle red ${color === "red" ? "active" : ""}`}
+          onClick={ColorChange}>
+        </div>
+        <div className={`circle yellow ${color === "yellow" ? "active" : ""}`}
+          onClick={ColorChange}>
+        </div>
+        <div className={`circle green ${color === "green" ? "active" : ""}`}
+          onClick={ColorChange}>
+        </div>
+      </div>
+      <div className="stick">
+        <div className="shift-button">
+          <button onClick={ColorChange}></button>
+        </div>
+      </div>
+      
+    </div>
+  );
 };
 
 export default TrafficLight;
