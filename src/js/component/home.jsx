@@ -15,8 +15,15 @@ const TrafficLight = () => {
       setColor("red")
     }
 
+    useEffect(()=>{                                 
+      const colorRotation = setInterval (() => {
+        ColorChange()
+      }, 5000);
 
-    
+      return () =>{
+        clearInterval (colorRotation)
+      };
+    }, [color])
   }
   return (
 		
