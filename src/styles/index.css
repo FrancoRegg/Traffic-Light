@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body{
+    background-image: url("https://cdn.pixabay.com/photo/2018/02/05/23/05/death-valley-3133502_640.jpg");
     width: 100%;
     min-height: 100vh;
     display: grid;
@@ -15,7 +16,7 @@ body{
 .container{
     display: grid;
     place-items: center;
-    margin-top: 120px;
+    margin-top: 230px;
     height: 20px;
 }
 .traffic-light{
@@ -32,7 +33,6 @@ body{
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: rgb(0, 0, 0, 0.3);
     position: relative;
 }
 .circle::after{
@@ -54,16 +54,16 @@ body{
     position: relative;
 }
 .red{
-    background-color: #111010;
+    background-color: black;
     box-shadow: 0 0 10px 1px;
 }
 
 .yellow{
-    background-color: #050505;
+    background-color: black;
     box-shadow: 0 0 10px 1px;
 }
 .green{
-    background-color: #080808;
+    background-color: black;
     box-shadow: 0 0 10px 1px;
 }
 .shift-button{
