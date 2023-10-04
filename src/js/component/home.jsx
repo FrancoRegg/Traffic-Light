@@ -5,7 +5,7 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 //create your first component
 const TrafficLight = () => {
-  const [color, setColor] = useState("red");  //cada vez aque la variable color cambia tambien lo hace el HTML 
+  const [color, setColor] = useState("red");  //cada vez aque la variable "color" cambia tambien lo hace el HTML 
 
   const ColorChange = () => {
     if (color === "red") setColor("yellow");
@@ -14,28 +14,27 @@ const TrafficLight = () => {
   };
 
 //Utilizo un temporizador para que el color cambie solo cada cinco segundos
-    /*useEffect(() => {
+   /* useEffect(() => {
       const colorRotation = setInterval(() => {
         ColorChange()
       }, 2000);
-
       return () => {
         clearInterval(colorRotation)
       };
-    }, [color])
-  };*/
+    }, [])
+  */
 
   return (
     <div className="container">
       <div className="traffic-light">
-        <div className={`circle red ${color === "red" && "active"}`}
+        <div className={`circle red ${color === "red" && "activered"}`}
           onClick={() => setColor("red")}>
         </div>
-        <div className={`circle yellow ${color === "yellow" && "active"}`}
+        <div className={`circle yellow ${color === "yellow" && "activeyellow"}`}
           onClick={() => setColor("yellow")}>
         </div>
-        <div className={`circle green ${color === "green" && "active"}`}
-          onClick={() => setColor("yellow")}>
+        <div className={`circle green ${color === "green" && "activegreen"}`}
+          onClick={() => setColor("green")}>
         </div>
       </div>
       <div className="stick">
