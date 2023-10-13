@@ -13,13 +13,13 @@ body{
     background-size: cover;
 }
 
-.container{
+.traffic{
     display: grid;
     place-items: center;
     margin-top: 230px;
     height: 20px;
 }
-.traffic-light{
+.head{
     width: 100px;
     height: 200px;
     border-radius: 30px;
@@ -27,6 +27,7 @@ body{
     display: grid;
     place-items: center;
     padding: 10px;
+    box-shadow: 1px 5px 10px rgba(0,0,0,.7);
 }
 .circle{
     display: block;
@@ -52,6 +53,7 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
+    box-shadow: 1px 5px 10px rgba(0,0,0,.7);
 }
 .red{
     background-color: black;
@@ -79,7 +81,7 @@ body{
     align-items: end;
     justify-content: center;
     z-index: 1;
-    
+    box-shadow: 2px 5px 8px rgba(0,0,0,.5);
 }
 button{
     width: 60%;
@@ -88,6 +90,12 @@ button{
     background-color: rgb(236, 236, 12);
     margin-bottom: 2px; 
     border: 2px solid rgba(87, 87, 5, 0.849);
+    box-shadow: inset 2px 2px 5px 0 rgba(54, 54, 54, 0.5);
+    transition: 0.2s;
+}
+button:hover{
+    box-shadow: inset 4px 4px 7px 0 rgba(54, 54, 54, 0.5);
+    transform: scale(1.0);
 }
 
 .warning {
